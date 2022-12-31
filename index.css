@@ -1,0 +1,798 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "HCo Gotham SSm", Helvetica, Arial, sans-serif;
+    padding: 0;
+}
+
+body {
+    background: var(--background);
+    overflow-x: hidden;
+}
+
+:root {
+    --text-color: white;
+    --background: #141526;
+    --text-hover: #1cbfff;
+    --gray: gray;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    background: var(--background);
+}
+
+.container header {
+    display: flex;
+    width: 100%;
+    height: 77px;
+    color: var(--text-color);
+    align-items: center;
+}
+
+.container header .logo {
+    width: 20%;
+}
+
+.container header .logo a {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    width: 100%;
+    justify-content: center;
+    letter-spacing: 1.5px;
+    color: var(--text-color);
+}
+
+.container header .logo a:hover {
+    color: var(--text-hover);
+}
+
+.container header .logo a i {
+    margin-right: 0.5em;
+    font-size: 23px;
+}
+
+.container header button.btn-open {
+    display: none;
+}
+
+.btn-close {
+    display: none;
+}
+
+.container header nav {
+    width: 80%;
+    margin-right: 3.5em;
+}
+
+.container header nav ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.container header nav ul button {
+    display: none;
+}
+
+.container header nav ul li {
+    margin-left: 4.5em;
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+}
+
+.container header nav ul li a {
+    color: var(--text-color);
+}
+
+.container header nav ul li a:hover {
+    color: var(--text-hover);
+}
+
+.container header nav ul li.account a {
+    display: flex;
+    align-items: center;
+}
+
+.container header nav ul li.account a i {
+    margin-right: 0.3em;
+}
+
+.container main {
+    color: var(--text-color);
+    width: 100%;
+}
+
+.container main .function {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    height: 60px;
+    font-weight: 500;
+}
+
+.container main .function .results {
+    display: flex;
+    justify-content: center;
+    margin-right: 2em;
+    transition: all 0.3s;
+}
+
+.container main .function .results:hover {
+    color: var(--text-hover);
+}
+
+.container main .function .results i {
+    margin-right: 0.4em;
+}
+
+.container main .function .setting {
+    display: flex;
+    justify-content: center;
+    margin-left: 2em;
+    transition: all 0.3s;
+}
+
+.container main .function .setting:hover {
+    color: var(--text-hover);
+}
+
+.container main .function .setting i {
+    margin-right: 0.4em;
+}
+
+.container main .go {
+    width: 12em;
+    height: 12em;
+    line-height: 11em;
+    text-align: center;
+    margin: 3em auto;
+}
+
+.container main .go p {
+    border-radius: 50%;
+    border: 4px solid transparent;
+    background: linear-gradient(#0d0e23 0 0) padding-box, linear-gradient(130deg, #05aafd, #2de5d1) border-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 35px;
+    letter-spacing: 1.5px;
+}
+
+.container main .go p a {
+    color: var(--text-color);
+}
+
+.container main .infor {
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3em;
+}
+
+.container main .infor .vinaphone {
+    display: flex;
+    margin-right: 4em;
+    margin-left: 2em;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+}
+
+.container main .infor .vinaphone div p {
+    margin-top: 0.4em;
+    color: var(--gray);
+}
+
+.container main .infor .vinaphone div.i {
+    border: 1px solid transparent;
+    background: linear-gradient(#0d0e23 0 0) padding-box, linear-gradient(130deg, #898b9f, #898b9f) border-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 3em;
+    margin-left: 0.4em;
+}
+
+.container main .infor .vietpn {
+    display: flex;
+    margin-left: 4em;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+}
+
+.container main .infor .vietpn div p {
+    margin-top: 0.4em;
+    color: var(--gray);
+}
+
+.container main .infor .vietpn div p a {
+    margin-top: 0.4em;
+    color: #5cfff3;
+}
+
+.container main .infor .vietpn div p a:hover {
+    color: var(--text-hover);
+}
+
+.container main .infor .vietpn div.i {
+    border: 1px solid transparent;
+    background: linear-gradient(#0d0e23 0 0) padding-box, linear-gradient(130deg, #898b9f, #898b9f) border-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 3em;
+    margin-right: 0.4em;
+}
+
+.container .connection {
+    text-align: center;
+    text-transform: capitalize;
+    color: gray;
+    letter-spacing: 1px;
+    margin-bottom: 3em;
+}
+
+.container .connection .click {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .connection .click p {
+    margin: 1.5em 3em;
+    color: var(--text-color);
+}
+
+.container .connection .click i {
+    border: 1px solid transparent;
+    background: linear-gradient(#0d0e23 0 0) padding-box, linear-gradient(130deg, #898b9f, #898b9f) border-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 3em;
+    color: var(--text-color);
+}
+
+.container .devices {
+    text-align: center;
+    letter-spacing: 1px;
+    margin-bottom: 3em;
+}
+
+.container .devices p {
+    margin-bottom: 3em;
+    font-weight: 500;
+}
+
+.container .devices div ul {
+    display: flex;
+    align-items: center;
+    color: gray;
+}
+
+.container .devices div ul li img {
+    width: 50%;
+}
+
+.container .devices div ul li:hover {
+    color: var(--text-hover);
+}
+
+.container article {
+    display: flex;
+    margin-top: 5em;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.container article .home-page-lower {
+    width: 15%;
+    margin: 0 2em;
+}
+
+.container article .home-page-lower img {
+    width: 45%;
+}
+
+.container article .home-page-lower h3 {
+    margin-bottom: 0.4em;
+}
+
+.container article .home-page-lower p {
+    color: gray;
+    line-height: 1.3em;
+    margin-bottom: 1.5em;
+}
+
+.container article .home-page-lower button {
+    color: var(--text-hover);
+    border: 2px solid gray;
+    width: 11em;
+    height: 3em;
+    text-transform: capitalize;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.1s;
+    background: transparent;
+    cursor: pointer;
+}
+
+.container article .home-page-lower button:hover {
+    color: var(--text-color);
+    border-color: var(--text-color);
+}
+
+footer {
+    width: 100%;
+    background: black;
+    height: auto;
+    color: var(--text-color);
+    margin-top: 3em;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+footer .menu {
+    display: flex;
+    justify-content: center;
+    padding: 4em 0;
+    align-items: flex-start;
+    margin: 0 auto;
+}
+
+footer .menu div {
+    margin-right: 11em;
+    width: 9%;
+}
+
+footer .menu div h3 {
+    margin-bottom: 1.2em;
+}
+
+footer .menu div ul li,
+footer .menu div p {
+    line-height: 1.7em;
+    color: gray;
+}
+
+footer .menu div ul li:hover,
+footer .menu div p:hover {
+    color: var(--text-color);
+}
+
+footer .pure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+footer .pure p {
+    width: 35%;
+    margin-left: 1em;
+    line-height: 1.5em;
+    color: gray;
+}
+
+footer .pure p span {
+    color: var(--text-hover);
+    transition: all 0.1s;
+}
+
+footer .pure p span:hover {
+    color: #63f7eb;
+}
+
+footer .license {
+    margin: 3em auto 0 auto;
+    text-align: center;
+    width: 40%;
+    color: gray;
+    line-height: 1.5em;
+}
+
+footer .menu-small ul {
+    display: flex;
+    padding: 3em 0;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .menu-small ul li {
+    margin: 0 1.5em;
+    color: gray;
+    transition: all 0.1s;
+}
+
+footer .menu-small ul li:hover {
+    color: var(--text-color);
+}
+
+
+/* run   */
+
+.container main .go-function {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 2em;
+}
+
+.container main .go-function div {
+    display: flex;
+    align-items: center;
+    ;
+}
+
+.container main .go-function div i {
+    margin-left: 0.5em;
+    color: var(--text-hover);
+    border: 2px solid transparent;
+    background: linear-gradient(var(--background) 0 0) padding-box, linear-gradient(130deg, #1cbfff, #1cbfff) border-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 2em;
+}
+
+.container main .go-function div i:hover {
+    background: linear-gradient(var(--background) 0 0) padding-box, linear-gradient(130deg, #6afff3, #6afff3) border-box;
+    color: #6afff3;
+}
+
+.container main .go-function div p span {
+    color: var(--text-hover);
+}
+
+.container article.go {
+    width: 60%;
+    height: auto;
+    background-color: #26273b;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 15px;
+    padding: 1em;
+    display: block;
+}
+
+.container article.go .parameter {
+    display: flex;
+    width: 60%;
+    text-transform: uppercase;
+    justify-content: space-around;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+.container article.go .parameter .download div {
+    display: flex;
+}
+
+.container article.go .parameter .upload div {
+    display: flex;
+}
+
+.container article.go .parameter .download div i {
+    color: #5dd7d1;
+    margin-right: 0.4em;
+    font-size: 18px;
+}
+
+.container article.go .parameter .upload div i {
+    color: #bf71ff;
+    margin-right: 0.4em;
+    font-size: 18px;
+}
+
+.container article.go .parameter .upload div p span {
+    text-transform: capitalize;
+    color: gray;
+    font-weight: normal;
+}
+
+.container article.go .parameter .download div p span {
+    text-transform: capitalize;
+    color: gray;
+    font-weight: normal;
+}
+
+.container article.go .parameter .download h3,
+.container article.go .parameter .upload h3 {
+    font-weight: normal;
+    margin-top: 0.5em;
+    font-size: 60px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container article.go .ping {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 60%;
+    margin: 1em auto;
+}
+
+.container article.go .ping p span {
+    color: gray;
+}
+
+.container article.go .ping div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container article.go .ping div i {
+    margin-right: 0.5em;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1em;
+    font-size: 18px;
+}
+
+.container article.go .ping div p {
+    font-size: 15px;
+}
+
+.container article.go .eot-infor {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.container article.go .eot-infor .left {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.container article.go .eot-infor .left p.go {
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background: linear-gradient(#0d0e23 0 0) padding-box, linear-gradient(130deg, #05aafd, #5cffec) border-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-transform: uppercase;
+    font-size: 25px;
+    letter-spacing: 1.5px;
+    color: var(--text-color);
+    width: 4em;
+    height: 4em;
+    line-height: 4em;
+}
+
+.container article.go .eot-infor .left div div.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 0;
+}
+
+.container article.go .eot-infor .left div div.content i {
+    border-radius: 50%;
+    border: 1px solid transparent;
+    background: linear-gradient(#0d0e23 0 0) padding-box, linear-gradient(130deg, gray, gray) border-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    color: gray;
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    margin-right: 0.5em;
+}
+
+.container article.go .eot-infor .left div div.content span {
+    color: gray;
+}
+
+.container article.go .eot-infor .left div div.content p:hover {
+    color: var(--text-hover);
+}
+
+.container article.go .eot-infor .left div div.content h5 {
+    color: #63f7eb;
+    font-size: 16px;
+}
+
+.container article.go .eot-infor .right {
+    width: 50%;
+    margin-top: 1em;
+}
+
+.container article.go .eot-infor .right h4 {
+    width: 80%;
+    text-align: center;
+    line-height: 1.5em;
+}
+
+.container article.go .eot-infor .right ul {
+    display: flex;
+    margin: 1em 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.container article.go .eot-infor .right ul li {
+    background: rgba(145, 147, 168, .2);
+    padding: 0.5em 1em;
+    margin: 0 0.06em;
+    width: 4em;
+    height: 2.5em;
+    line-height: 1.8em;
+    border-radius: 4px;
+}
+
+.container article.go .eot-infor .right ul li:hover {
+    background: var(--text-hover);
+}
+
+.container article.go .eot-infor .right div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: gray;
+}
+
+
+/* responsive mobile  */
+
+@media only screen and (max-width: 768px) {
+    .container header {
+        height: auto;
+        margin-top: 2em;
+        display: inline-block;
+    }
+    .container header nav {
+        display: none;
+    }
+    #mySidebar {
+        background-color: #26273b;
+        line-height: 2em;
+        width: 100%;
+        margin: 0 auto;
+        padding: 1em;
+    }
+    .container header .logo {
+        width: 40%;
+    }
+    .container header nav ul {
+        display: inline-block;
+    }
+    .container header nav ul li a:hover {
+        color: var(--text-hover);
+    }
+    .container header nav ul li {
+        width: 50% !important;
+    }
+    .container header button.btn-open {
+        display: block;
+        width: 3em;
+        height: 2em;
+        border: 1px solid gray;
+        border-radius: 5px;
+        background: transparent;
+        color: var(--text-hover);
+        margin-left: 3.5em;
+        margin-top: 1em;
+        font-size: 18px;
+    }
+    .container header button.btn-close {
+        background: transparent;
+        width: 5em;
+        height: 2em;
+        border: 1px solid gray;
+        border-radius: 5px;
+        position: absolute;
+        right: 7em;
+        top: 10em;
+        color: var(--text-color);
+        display: block;
+    }
+    .container .devices div ul {
+        flex-wrap: wrap;
+        font-size: 20px;
+    }
+    .container article {
+        flex-wrap: wrap;
+    }
+    .container article .home-page-lower {
+        width: 50%;
+    }
+    .container article .home-page-lower button {
+        margin-bottom: 2em;
+    }
+    footer .menu {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    footer .menu div {
+        margin: 0 3em;
+        width: 30%;
+    }
+    footer .pure p {
+        width: 70%;
+    }
+    footer .license {
+        width: 100%;
+        padding: 0 2em;
+    }
+    footer .menu-small ul {
+        flex-direction: column;
+    }
+    footer .menu-small ul li {
+        margin-bottom: 0.5em;
+    }
+    .container main .go-function {
+        margin-top: 1em;
+    }
+    .container article.go .parameter {
+        width: 50%;
+        flex-wrap: wrap;
+    }
+    .container article.go .parameter .download div {
+        margin-bottom: -1em;
+        margin-top: 1em;
+    }
+    .container article.go .parameter .upload div {
+        margin-bottom: -1em;
+        margin-top: 1em;
+    }
+    .container article.go .eot-infor {
+        flex-direction: column;
+    }
+    .container article.go .eot-infor .left {
+        width: 100%;
+    }
+    .container article.go .eot-infor .right {
+        width: 100%;
+    }
+    .container article.go .eot-infor .right h4 {
+        width: 100%;
+    }
+}
